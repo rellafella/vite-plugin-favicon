@@ -1,5 +1,5 @@
 {
-	"version": "0.1",
+	"version": "0.2",
 	"language": "en",
 	"words": [
 		"bitauth",
@@ -38,10 +38,8 @@
 		"vite",
 		"favicons",
 		"favicon's",
-		"resampling"
-	],
-	"flagWords": [
-		"hte"
+		"resampling",
+		"vitest",
 	],
 	"ignorePaths": [
 		"package.json",
