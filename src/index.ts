@@ -105,7 +105,7 @@ export const ViteFaviconsPlugin = (options: FaviconsPluginArgs = {} ): Plugin =>
 			}
 			if (!lOptions.inject) {
 				const name = 'webapp.html';
-				const contents = res.html.join("\n");
+				const contents = res.html.join('\n');
 				const outputPath = lOptions.outputPath === undefined ? '' : lOptions.outputPath;
 				const filePath = path.join(viteConfig.build.assetsDir, outputPath, name);
 				assetIds.set(name, ctx.emitFile({type: 'asset', fileName: filePath, source: contents}));
@@ -130,7 +130,7 @@ export const ViteFaviconsPlugin = (options: FaviconsPluginArgs = {} ): Plugin =>
 		async buildStart () {
 			await rebuildFavicons(this);
 		},
-		configResolved(resolvedConfig: ResolvedConfig) {
+		configResolved (resolvedConfig: ResolvedConfig) {
 			viteConfig = resolvedConfig;
 		},
 		transformIndexHtml () {

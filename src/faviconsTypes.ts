@@ -26,7 +26,7 @@ export interface FaviconOptions {
 	dir: string;
 	/** Primary language for name and short_name @default 'en-US' */
 	lang: string;
-	/** Background colour for flattened icons @default '#fff' */
+	/** Background color for flattened icons @default '#fff' */
 	background: string;
 	/** Theme color user for example in Android's task switcher @default '#fff' */
 	theme_color: string;
