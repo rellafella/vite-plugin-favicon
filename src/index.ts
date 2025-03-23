@@ -1,11 +1,10 @@
 import type { Plugin, HtmlTagDescriptor, ResolvedConfig } from 'vite';
 import type { PluginContext } from 'rollup';
-import favicons from 'favicons';
+import favicons, {type FaviconOptions} from 'favicons';
 import Oracle from './oracle.js';
 import path from 'path';
 import { getDefaultFaviconConfig } from './faviconsDefaults.js';
 import { parseFragment } from 'parse5';
-import type { FaviconOptions } from './faviconsTypes.js';
 
 type FaviconsConfig = Partial<FaviconOptions>
 export type ViteFaviconsPluginOptions = {
@@ -79,10 +78,13 @@ export const ViteFaviconsPlugin = (options: FaviconsPluginArgs = {} ): Plugin =>
 	const getFavicons = async () => {
 		if (lOptions && lOptions.favicons) {
 			const outputPath = lOptions.outputPath === undefined ? '' : lOptions.outputPath;
-			lOptions.favicons.path = path.join(viteConfig.base, viteConfig.build.assetsDir, outputPath);
+			lOptions.favicons = {
+				...lOptions.favicons,
+				path: path.join(viteConfig.base, viteConfig.build.assetsDir, outputPath),
+			};
 		}
 		const faviconConfig = getDefaultFaviconConfig(lOptions);
-		return await favicons(LOGO_PATH,faviconConfig);
+		return await favicons(LOGO_PATH, faviconConfig);
 	};
 
 	const tags: HtmlTag[] = [];
