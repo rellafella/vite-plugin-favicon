@@ -154,7 +154,6 @@ In combination with [Vite's html plugin hooks](https://vitejs.dev/guide/api-plug
 <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/assets/apple-touch-startup-image-1536x2008.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="228x228" href="/assets/coast-228x228.png">
 <link rel="manifest" href="/assets/manifest.json">
 <link rel="shortcut icon" href="/assets/favicon.ico">
 <link rel="yandex-tableau-widget" href="/assets/yandex-browser-manifest.json">
@@ -232,7 +231,6 @@ plugins: [
       background: '#ddd',
       theme_color: '#333',
       icons: {
-        coast: false,
         yandex: false
       }
     }
